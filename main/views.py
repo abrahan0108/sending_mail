@@ -3,7 +3,7 @@ from main import forms
 # Create your views here.
 
 
-class ContacUsView(FormView):
+class ContactUsView(FormView):
     template_name = "main/contact_form.html"
     form_class = forms.ContactForm
     success_url = "/"

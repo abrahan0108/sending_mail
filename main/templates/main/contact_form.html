@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Send Email</h2>
+    <h2>Contact Us</h2>
     <form method="post">
         {% csrf_token %}
-        <input type="email" name="email" placeholder="Enter an email id to start sending emails">
+        {{ form }}
         <button type="submit">Send Email Now</button>
     </form>
 {% endblock %}

@@ -1,12 +1,14 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import sending_mail
+from main import views
 
 
 urlpatterns = [
     path("",
          TemplateView.as_view(template_name="home.html"),
          name="home"),
-    path("send_email/",
-         sending_mail),
+    path("contact_us/",
+         views.ContacUsView.as_view(),
+         name="contact_us",
+         ),
 ]

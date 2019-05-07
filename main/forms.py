@@ -7,9 +7,8 @@ logger =logging.getLogger(__name__)
 
 
 class ContactForm(forms.Form):
-   from_email = forms.EmailField(required=True)
-   subject = forms.CharField(required=True)
-   message = forms.CharField(widget=forms.Textarea, required=True)
+   name = forms.CharField(label='Tu nombre', max_length=100)
+   message = forms.CharField(widget=forms.Textarea, max_length=600)
 
    def send_mail(self):
       logger.info("Sending email to customer service")
@@ -20,7 +19,7 @@ class ContactForm(forms.Form):
       send_mail(
          "Site message",
          message,
-         "f8abrahan@gmail.com",
-         ["cortes.abrahan@yahoo.com.mx"],
+         "acortes.8@zoho.com",
+         ["f8abrahan@gmail.com"],
          fail_silently=False,
       )

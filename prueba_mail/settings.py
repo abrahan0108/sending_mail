@@ -117,11 +117,11 @@ USE_TZ = True
 # Email settings
 if not DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST = 'smtp.zoho.com'
     EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST_HUSER = 'f8abrahan@gmail.com'
-    EMAIL_HOST_PASSWORD = 'madeleine0304'
+    EMAIL_PORT = 465
+    EMAIL_HOST_USER = 'acortes.8@zoho.com'
+    EMAIL_HOST_PASSWORD = '@3RNt1d¡n$'
 else:
     EMAIL_BACKEND = (
         'django.core.mail.backends.console.EmailBackend'
